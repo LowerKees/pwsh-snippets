@@ -17,7 +17,7 @@ $pat = ":$USERPAT"
 $bytes = [System.Text.Encoding]::ASCII.GetBytes($pat)
 $pat64 = [Convert]::ToBase64String($bytes)
 
-$uri = "https://dev.azure.com/$ORG/$PROEJCT/_apis/git/repositories?api-version=7.1-preview.1"
+$uri = "https://dev.azure.com/$ORG/$PROJECT/_apis/git/repositories?api-version=7.1-preview.1"
 $headers = @{
     "Authorization" = "Basic $pat64"
     "Content-Type"  = "application/json"
